@@ -39,7 +39,7 @@ const Register = () => {
     const accessToken = getAccessToken();
     const isAuthenticated = getIsAuthenticated();
     if (isAuthenticated === "true" && accessToken !== "") {
-      router.push("/");
+      router.push("/dashboard");
     }
   }, [getIsAuthenticated, getAccessToken, router]);
 
@@ -55,7 +55,7 @@ const Register = () => {
     e.preventDefault();
 
     signup({ email, password })
-      .then(() => router.push("/"))
+      .then(() => router.push("/dashboard"))
       .catch((error) => {
         toast({
           title: "Registration error",
@@ -109,7 +109,7 @@ const Register = () => {
           <Button
             variant="secondary"
             onClick={() => {
-              router.push("/login");
+              router.push("/");
             }}
           >
             Login

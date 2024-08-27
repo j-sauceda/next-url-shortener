@@ -42,7 +42,7 @@ const Dashboard = () => {
   useLayoutEffect(() => {
     const isAuthenticated = getIsAuthenticated();
     if (isAuthenticated === "false") {
-      router.push("/login");
+      router.push("/");
     }
   }, [getIsAuthenticated, router]);
 
