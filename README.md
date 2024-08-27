@@ -2,7 +2,11 @@
 
 A basic URL shortener built with [Next.js](https://nextjs.org/) 14, MongoDB, JWT tokens and ShadCn components. This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Testing the project
+
+Feel free to test a deployment of this project [here](https://cortito.netlify.app/).
+
+## Modifying the project
 
 First, run the development server:
 
