@@ -63,7 +63,7 @@ const Dashboard = () => {
   }, [refresh, router, toast]);
 
   const onCopyLink = async (link: string) => {
-    const baseUrl = window.location.href;
+    const baseUrl = window.location.href.replace("/dashboard", "/");
     await navigator.clipboard.writeText(baseUrl + link);
     toast({
       title: "Success!",
@@ -112,7 +112,9 @@ const Dashboard = () => {
               {data.map((item: IUrl) => (
                 <TableRow key={item.urlId}>
                   <TableCell>
-                    <abbr title={`${window.location.href}${item.urlId}`}>
+                    <abbr
+                      title={`${window.location.href.replace("/dashboard", "/")}${item.urlId}`}
+                    >
                       <a
                         href={`/${item.urlId}`}
                         target="_blank"

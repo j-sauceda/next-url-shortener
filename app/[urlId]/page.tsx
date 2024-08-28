@@ -25,7 +25,6 @@ const ShortLink: FC = () => {
         setData(data);
       } catch (error) {
         console.error("Error fetching short link", error);
-        setError(JSON.stringify(error));
       }
     };
     fetchData();
